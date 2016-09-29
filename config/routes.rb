@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   get '/menu', controller: :menu, action: :index
 
+  root to: 'restaurant#index'
+
 end
