@@ -11,8 +11,4 @@ class RegistrationsController < Devise::RegistrationsController
     restaurant_path
   end
 
-  def after_inactive_sign_up_path_for(resource)
-    user_registration_path
-  end
-
 end
