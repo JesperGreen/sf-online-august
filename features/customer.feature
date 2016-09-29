@@ -31,3 +31,9 @@ Scenario: Gives you an error when you register without email
   Then I should be on the "register error" page
   And I should see "Email can't be blank"
   Then there should be "0" users in the system
+
+Scenario: Gives you an error when you register without address
+  Given I register as a user with address ""
+  Then I should be on the "register error" page
+  And I should see "Address can't be blank"
+  Then there should be "0" users in the system
