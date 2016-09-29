@@ -41,6 +41,8 @@ def goto(page)
     menu_path
   when 'Create Dish'
     new_dish_path
+  when 'register'
+    new_user_registration_path
   else
     root_path
   end

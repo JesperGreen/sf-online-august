@@ -11,14 +11,14 @@ Scenario: I register as a Customer
     | Email                 |
     | Address               |
     | Password              |
-    | Password Confirmation |
+    | Password confirmation |
   When I fill in:
     | element                    | content          |
     | Name                       | Julie            |
     | Email                      | julie@random.com |
     | Address                    | Fjällgatan 3, Göteborg, Västa Götaland, Sverige |
     | Password                   | password         |
-    | Password Confirmation      | password         |
+    | Password confirmation      | password         |
   When I click the "Register" button
   Then I should be on the "restaurant" page
   And I should see "Julie"
