@@ -5,6 +5,4 @@ Rails.application.routes.draw do
   resources :menu, only: [:index, :create, :new]
   resources :dishes, only: [:new, :show, :create]
 
-  root to: 'restaurant#index'
-
 end
