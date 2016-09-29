@@ -26,12 +26,6 @@ ActiveRecord::Schema.define(version: 20160929083816) do
     t.datetime "updated_at",       null: false
   end
 
-  create_table "menus", force: :cascade do |t|
-    t.string   "title",      default: "", null: false
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",         null: false
     t.string   "encrypted_password",     default: "",         null: false
