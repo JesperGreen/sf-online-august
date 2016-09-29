@@ -25,3 +25,9 @@ Scenario: Gives you an error when you register without name
   Then I should be on the "register error" page
   And I should see "Name can't be blank"
   Then there should be "0" users in the system
+
+Scenario: Gives you an error when you register without email
+  Given I register as a user with username "Jesper" and email ""
+  Then I should be on the "register error" page
+  And I should see "Email can't be blank"
+  Then there should be "0" users in the system
