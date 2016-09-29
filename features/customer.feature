@@ -15,7 +15,13 @@ Scenario: I register as a Customer
   When I click the "Register" button
   Then there should be "1" user in the system
 
-  Scenario: Redirects to restaurant index page after registration
-    Given I register as a user with username "Amber" and email "amber@random.com"
-    Then I should be on the "restaurant" page
-    And I should see "Amber"
+Scenario: Redirects to restaurant index page after registration
+  Given I register as a user with username "Amber" and email "amber@random.com"
+  Then I should be on the "restaurant" page
+  And I should see "Amber"
+
+Scenario: Gives you an error when you register without name
+  Given I register as a user with username "" and email "amber@random.com"
+  Then I should be on the "register error" page
+  And I should see "Name can't be blank"
+  Then there should be "0" users in the system
