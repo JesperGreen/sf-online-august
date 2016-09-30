@@ -53,6 +53,8 @@ def goto(page)
     new_dish_path
   when 'register'
     new_user_registration_path
+  when 'user registration'
+    user_registration_path
   else
     root_path
   end

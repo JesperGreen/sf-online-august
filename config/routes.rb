@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :dishes, only: [:new, :show, :create]
 
   root to: 'restaurant#index'
+
+  root to: 'restaurant#index'
 end
