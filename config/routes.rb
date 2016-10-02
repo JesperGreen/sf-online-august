@@ -11,5 +11,5 @@ Rails.application.routes.draw do
 
   resources :menus, only: [:index, :create, :new, :show]
 
-  root to: 'restaurants#index'
+  root controller: :home, action: :index
 end
