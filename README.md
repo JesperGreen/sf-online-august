@@ -14,10 +14,9 @@
  to your computer and run these commands:
 
     ```
-    bundle install
-    ```
-    ```
-    rails db:create
-    ```
-    rails db:migrate
+  $  bundle install
+
+  $  rails db:create
+
+  $  rails db:migrate
     ```
