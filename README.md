@@ -11,12 +11,10 @@
 # Installation
 
  To run this on your machine simply fork and clone this repository
- to your computer and run these commands:
+ to your computer and run these commands starting form the top:
 
-    ```
-  $  bundle install
-
-  $  rails db:create
-
-  $  rails db:migrate
-    ```
+ ```
+ $ bundle install
+ $ rails db:create
+ $ rails db:migrate
+ ```
