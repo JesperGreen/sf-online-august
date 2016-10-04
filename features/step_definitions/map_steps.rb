@@ -24,7 +24,7 @@ Then(/^the map\-div should contain a map$/) do
   end
 end
 
-And(/^my location is set$/)
+And(/^my location is set$/) do
   lat, lng = 57.7088700, 11.9745600
   simulate_location(lat, lng)
 end
