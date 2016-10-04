@@ -11,11 +11,6 @@
       - @restaurants.each do | restaurant |
         %h5
           = link_to restaurant.name, restaurant_path(restaurant.id)
-        %p
-          = restaurant.description
-        %p
-          = restaurant.town
-
       %div Placeholder for popular restaurants
       %div Highlighted dishes placeholder
       %div Comment and rate placeholder
