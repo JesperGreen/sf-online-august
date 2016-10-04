@@ -22,13 +22,10 @@ Given(/^I already have a restaurant$/) do
   }
 end
 
-Given(/^"([^"]*)" owns the following restaurant$/) do |name, table|
+Given(/^the following restaurants exists$/) do |table|
   table.hashes.each do |hash|
-    set_user(name)
-    name = hash[:name]
-    description = hash[:description]
-    town = hash[:town]
-    FactoryGirl.create(:restaurant, name: name, description: description, town: town, user: @user)
+    user = User.find_by(name: hash[:owner])
+    FactoryGirl.create(:restaurant, name: hash[:name], description: hash[:description], town: hash[:town], user: user)
   end
 end
 
