@@ -24,9 +24,9 @@ Then(/^the map\-div should contain a map$/) do
   end
 end
 
-And(/^my location is set$/) do
-  lat, lng = 57.7088700, 11.9745600
-  simulate_location(lat, lng)
+Given(/^my location is set to "([^"]*)" lat and "([^"]*)" lng$/) do |lat, lng|
+  latitude, longitude = lat.to_f, lng.to_f
+  simulate_location(latitude, longitude)
 end
 
 When /^I expect a Google map to load$/ do

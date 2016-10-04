@@ -7,11 +7,12 @@ Feature: As a Customer
       | name  | email         | role  |
       | Anna  | anna@food.se  | owner |
       | Janne | janne@food.se | owner |
-  
+
     And the following restaurants exists
       | name | description | town | owner |
       | McD  | Nice food   | Home | Anna  |
       | McF  | Nice food   | Gone | Janne |
+
     And I am on the "index" page
 
   @javascript
@@ -21,7 +22,7 @@ Feature: As a Customer
 
   @javascript
   Scenario: Viewing my location on the map
-    And my location is set
+    And my location is set to "57.7088700" lat and "11.9745600" lng
     Then I expect a Google map to load
 
   Scenario: Geocode restaurant
