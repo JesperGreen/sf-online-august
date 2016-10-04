@@ -9,9 +9,10 @@
   you can both order or deliver food depending on your role.
 
   And if you're just looking for a certain style of food you can
-  find restaurants of your choice using our app locating it on a map for you.
+  find restaurants of your choice using our app locating nearby
+  restaurants on a map for you.
 
-  You can take a look at it's current state right [**here**](https://url.com/)
+  You can take a look at it's current state right [**here**](https://http://slow-food-august.herokuapp.com/.com/)
 
 
 # Installation
@@ -31,12 +32,20 @@
 
 # Built with
 
-* [Ruby](https://www.ruby-lang.org/) (version 2.3.0) as a language #
-* [Ruby on Rails](http://rubyonrails.org/) (Rails 5.0.0.1) as a framework #
-* [Haml](http://haml.info/) as a template engine #
-* [PostgreSQL](https://www.postgresql.org/) as our database #
-* [Pivotal Tracker](https://www.pivotaltracker.com/n/projects/1878955) as our planning tool #
-* [Cucumber](https://cucumber.io/) for acceptance testing #
-* [RSpec](http://rspec.info/) for unit testing #
-* [Travis CI](https://travis-ci.org/) for continuous integration #
-* [Coveralls](https://coveralls.io/) for test coverage #
+* [Ruby](https://www.ruby-lang.org/) (version 2.3.0) as a language
+* [Ruby on Rails](http://rubyonrails.org/) (Rails 5.0.0.1) as a framework
+* [Haml](http://haml.info/) as a template engine
+* [PostgreSQL](https://www.postgresql.org/) as our database
+* [Pivotal Tracker](https://www.pivotaltracker.com/n/projects/1878955) as our planning tool
+* [Cucumber](https://cucumber.io/) for acceptance testing
+* [RSpec](http://rspec.info/) for unit testing
+* [Travis CI](https://travis-ci.org/) for continuous integration
+* [Coveralls](https://coveralls.io/) for test coverage
+
+## Contributors
+
+* [Susanna](https://github.com/thesuss)
+* [Petronella](https://github.com/PetronellaSimonsbacka)
+* [Amber](https://github.com/AmberWilkie)
+* [Viktoria](https://github.com/Blokkinen)
+* [Jesper](https://github.com/JesperGreen)
