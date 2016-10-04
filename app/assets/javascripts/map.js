@@ -28,6 +28,7 @@ function performGeolocation() {
               success: function (position) {
                 latitude = position.coords.latitude
                 longitude = position.coords.longitude
+                map.setCenter(latitude, longitude);
               },
               error: function (error) {
                   alert('Geolocation failed: ' + error.message);
@@ -39,6 +40,6 @@ function performGeolocation() {
   } else {
     latitude = 59.3293235;
     longitude = 18.0685808;
-  };
-  map.setCenter(latitude, longitude);
+    map.setCenter(latitude, longitude);
+  }
 }
