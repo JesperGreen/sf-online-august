@@ -39,6 +39,6 @@ function performGeolocation() {
   } else {
     latitude = 59.3293235;
     longitude = 18.0685808;
-  }
+  };
   map.setCenter(latitude, longitude);
 }
