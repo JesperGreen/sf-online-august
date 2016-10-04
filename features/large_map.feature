@@ -26,6 +26,10 @@ Scenario: Viewing my location on the map
   And my location is "Gothenburg"
   Then I expect a Google map to load
 
+Scenario: Geocode restaurant
+  Given I am on restaurant page for "McD"
+  Then "McD" should have a latitude
+
 Scenario: Listing restaurants on index
   Then I should see:
   | content   |
