@@ -15,7 +15,7 @@ function addMarker() {
           lat: gon.restaurants[0].latitude,
           lng: gon.restaurants[0].longitude,
       });
-    }  
+    }
   }
 }
 
@@ -35,7 +35,7 @@ function performGeolocation() {
                   alert('Geolocation failed: ' + error.message);
               },
               not_supported: function () {
-                  alert("Your browser does not support geolocation");
+                  alert('Your browser does not support geolocation');
               }
           });
   } else {
