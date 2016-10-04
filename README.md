@@ -21,18 +21,22 @@
 
  ```
  $ bundle install
+ ```
+ ```
  $ rails db:create
+ ```
+ ```
  $ rails db:migrate
  ```
 
 # Built with
 
 * [Ruby](https://www.ruby-lang.org/) (version 2.3.0) as a language #
- Ruby on Rails (Rails 5.0.0.1) as a framework #
- Haml as a template engine #
- PostgreSQL as our database #
- Pivotoltracker as our planning tool #
- Cucumber for acceptance testing #
- RSpec for unit testing #
- Travis CI for continuous integration #
- Coveralls for test coverage #
+* [Ruby on Rails](http://rubyonrails.org/) (Rails 5.0.0.1) as a framework #
+* [Haml](http://haml.info/) as a template engine #
+* [PostgreSQL](https://www.postgresql.org/) as our database #
+* [Pivotal Tracker](https://www.pivotaltracker.com/n/projects/1878955) as our planning tool #
+* [Cucumber](https://cucumber.io/) for acceptance testing #
+* [RSpec](http://rspec.info/) for unit testing #
+* [Travis CI](https://travis-ci.org/) for continuous integration #
+* [Coveralls](https://coveralls.io/) for test coverage #
