@@ -15,7 +15,6 @@ Background:
   | McF  | Nice food   | Gone |
   And I am on the "index" page
 
-
 @javascript
 Scenario: Show map on index page
   Then I see a map-div
@@ -23,7 +22,7 @@ Scenario: Show map on index page
 
 @javascript
 Scenario: Viewing my location on the map
-  And my location is "Gothenburg"
+  And my location is set
   Then I expect a Google map to load
 
 Scenario: Geocode restaurant

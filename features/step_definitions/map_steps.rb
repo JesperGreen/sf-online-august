@@ -24,13 +24,8 @@ Then(/^the map\-div should contain a map$/) do
   end
 end
 
-And(/^my location is "([^"]*)"$/) do |city|
-  case city
-    when 'Gothenburg' then
-      lat, lng = 57.7088700, 11.9745600
-    when 'Stockholm' then
-      lat, lng = 59.3293230, 18.0685810
-  end
+And(/^my location is set$/)
+  lat, lng = 57.7088700, 11.9745600
   simulate_location(lat, lng)
 end
 
