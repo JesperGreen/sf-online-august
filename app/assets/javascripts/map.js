@@ -9,11 +9,13 @@ $(document).ready(function(){
   addMarker();
 });
 function addMarker() {
-  for (i = 0; i < gon.restaurants.length; i++) {
-    map.addMarker({
-        lat: gon.restaurants[0].latitude,
-        lng: gon.restaurants[0].longitude,
-    });
+  if(gon.restaurants) {
+    for (i = 0; i < gon.restaurants.length; i++) {
+      map.addMarker({
+          lat: gon.restaurants[0].latitude,
+          lng: gon.restaurants[0].longitude,
+      });
+    }  
   }
 }
 
