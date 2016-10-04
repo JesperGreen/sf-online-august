@@ -2,6 +2,7 @@ require 'coveralls'
 Coveralls.wear_merged!("rails")
 require 'cucumber/rails'
 require 'capybara/poltergeist'
+require 'capybara-screenshot/cucumber'
 ActionController::Base.allow_rescue = true
 begin
   DatabaseCleaner.strategy = :transaction

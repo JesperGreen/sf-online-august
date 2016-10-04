@@ -59,6 +59,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-screenshot (1.0.13)
+      capybara (>= 1.0, < 3)
+      launchy
     cliver (0.3.2)
     coderay (1.1.1)
     concurrent-ruby (1.0.2)
@@ -296,6 +299,7 @@ DEPENDENCIES
   acts_as_shopping_cart (~> 0.4.1)
   bootstrap-sass (~> 3.3.6)
   cancancan (~> 1.10)
+  capybara-screenshot
   coveralls
   cucumber-rails
   database_cleaner

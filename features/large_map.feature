@@ -16,23 +16,21 @@ Feature: As a Customer
     And I am on the "index" page
 
   @javascript
-  Scenario: Show map on index page
-    Then I see a map-div
-    And the map-div should contain a map
-
-  @javascript
   Scenario: Viewing my location on the map
     And my location is set to "57.7088700" lat and "11.9745600" lng
-    Then I expect a Google map to load
+    And the map has been loaded
+    Then I should see "2" markers
 
-  Scenario: Geocode restaurant
-    Given I am on restaurant page for "McD"
-    Then "McD" should have a latitude
-
-  Scenario: Listing restaurants on index
-    Then I should see:
-      | content |
-      | McD     |
-      | McF     |
-    When I click the link "McD"
-    Then I should be on the restaurant page for "McD"
+#  This is tested in our unit tests. There is no impact on the user interface
+#  Scenario: Geocode restaurant
+#    Given I am on restaurant page for "McD"
+#    Then "McD" should have a latitude
+#
+#  This should be moved to a feature dealing with visiting a specific restaurant.
+#  Scenario: Listing restaurants on index
+#    Then I should see:
+#      | content |
+#      | McD     |
+#      | McF     |
+#    When I click the link "McD"
+#    Then I should be on the restaurant page for "McD"

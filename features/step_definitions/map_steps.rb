@@ -14,22 +14,12 @@ Then(/^"([^"]*)" should have a latitude$/) do |name|
   expect(restaurant.latitude).not_to be nil
 end
 
-Then(/^I see a map-div$/) do
-  expect(page).to have_css '#map'
-end
-
-Then(/^the map\-div should contain a map$/) do
-  within('#map') do
-    expect(page).to have_css '.gm-style'
-  end
-end
-
 Given(/^my location is set to "([^"]*)" lat and "([^"]*)" lng$/) do |lat, lng|
   latitude, longitude = lat.to_f, lng.to_f
   simulate_location(latitude, longitude)
 end
 
-When /^I expect a Google map to load$/ do
+When(/^(?:I expect a Google map to load|the map has been loaded)$/)do
   loop until all(:css, '#map .gm-style').length == 1
   expect(page).to have_css '#map .gm-style'
 end
@@ -40,4 +30,11 @@ def simulate_location(lat, lng)
                   success: function (position) {
                     map.setCenter(#{lat}, #{lng})}
                     });")
+end
+
+
+Then(/^I should see "([^"]*)" (?:marker|markers)$/) do |count|
+  sleep(0.1) until page.evaluate_script('$.active') == 0
+  expected_count = page.evaluate_script('map.markers.length')
+  expect(expected_count).to eq count.to_i
 end
