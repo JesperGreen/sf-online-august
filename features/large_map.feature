@@ -33,9 +33,6 @@ Scenario: Listing restaurants on index
   Then I should see:
   | content   |
   | McD       |
-  | Nice food |
-  | Home      |
   | McF       |
-  | Gone      |
   When I click the link "McD"
   Then I should be on the restaurant page for "McD"
