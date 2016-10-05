@@ -10,12 +10,6 @@ $(document).ready(function () {
 });
 function addMarkers() {
     if (gon.restaurants) {
-        //for (i = 0; i < gon.restaurants.length; i++) {
-        //    map.addMarker({
-        //        lat: gon.restaurants[0].latitude,
-        //        lng: gon.restaurants[0].longitude,
-        //    });
-        //}
         gon.restaurants.forEach(function (restaurant) {
             map.addMarker({
                 lat: restaurant.lattitude,
@@ -24,7 +18,6 @@ function addMarkers() {
         })
     }
 }
-
 function performGeolocation() {
     var latitude;
     var longitude;

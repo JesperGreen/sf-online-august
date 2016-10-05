@@ -27,9 +27,9 @@ end
 
 def simulate_location(lat, lng)
   page.execute_script("GMaps.geolocate({
-                  success: function (position) {
-                    map.setCenter(#{lat}, #{lng})}
-                    });")
+                        success: function (position) {
+                        map.setCenter(#{lat}, #{lng})}
+                        });")
 end
 
 

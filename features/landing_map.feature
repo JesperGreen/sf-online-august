@@ -20,17 +20,3 @@ Feature: As a Customer
     And my location is set to "57.7088700" lat and "11.9745600" lng
     And the map has been loaded
     Then I should see "2" markers
-
-#  This is tested in our unit tests. There is no impact on the user interface
-#  Scenario: Geocode restaurant
-#    Given I am on restaurant page for "McD"
-#    Then "McD" should have a latitude
-#
-#  This should be moved to a feature dealing with visiting a specific restaurant.
-#  Scenario: Listing restaurants on index
-#    Then I should see:
-#      | content |
-#      | McD     |
-#      | McF     |
-#    When I click the link "McD"
-#    Then I should be on the restaurant page for "McD"
