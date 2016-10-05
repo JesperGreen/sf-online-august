@@ -32,8 +32,8 @@ function performGeolocation() {
     if (testing_env == false) {
         GMaps.geolocate({
             success: function (position) {
-                latitude = position.coords.latitude
-                longitude = position.coords.longitude
+                latitude = position.coords.latitude;
+                longitude = position.coords.longitude;
                 map.setCenter(latitude, longitude);
             },
             error: function (error) {
