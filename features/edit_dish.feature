@@ -26,7 +26,6 @@ Feature: As a restaurant owner
   Scenario: I should be the only one who can edit my dishes
     Given the following users exist
       | name  | email         | role  |
-      | Anna  | anna@food.se  | owner |
       | Bosse | bosse@food.se | owner |
     When I log in as "Bosse"
     And I visit the restaurant page for "Anna"
