@@ -8,6 +8,11 @@ Given(/^I am logged in as a restaurant owner$/) do
   login_as(user, scope: :user)
 end
 
+And(/^"([^"]*)" is logged in as restaurant owner$/) do |name|
+  owner = User.find_by(name: name)
+  login_as(owner, scope: :user)
+end
+
 Given(/^I already have a restaurant$/) do
   steps %q{
     Given I am on the "create restaurant" page
@@ -90,7 +95,14 @@ Given(/^the following restaurants exists$/) do |table|
   end
 end
 
+When(/^I log in as "([^"]*)"$/) do |name|
+  user = User.find_by(name: name)
+  login_as(user, scope: :user)
+end
+
 private
 def set_user(name)
   @user = User.find_by(name: name)
 end
+
+
