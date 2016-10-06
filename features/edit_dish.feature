@@ -35,3 +35,13 @@ Feature: As a restaurant owner
 
   Scenario: Visitors can not edit dishes
     Given I am not logged in
+    And I am on the dish page for "Kebab"
+    Then I should not see "Edit"
+
+  Scenario: Customers can not edit dishes
+    Given the following users exist
+      | name  | email         | role     |
+      | Emma  | emma@food.se  | customer |
+    And I log in as "Emma"
+    And I am on the dish page for "Kebab"
+    Then I should not see "Edit dish"
