@@ -27,7 +27,7 @@ Feature: As a restaurant owner
     Given the following users exist
       | name  | email         | role  |
       | Bosse | bosse@food.se | owner |
-    When I log in as "Bosse"
+    And I log in as "Bosse"
     And I visit the restaurant page for "Anna"
     And I click the link "Edit"
     Then I should see "You are not authorized to access this page."
@@ -44,3 +44,10 @@ Feature: As a restaurant owner
     And I log in as "Emma"
     And I am on the dish page for "Kebab"
     Then I should not see "Submit"
+
+  Scenario: I mess up the edit for dish
+    Given I am on the dish page for "Kebab"
+    And I click the link "Edit dish"
+    And I fill in "Dish Name" with ""
+    And I click the "Submit" button
+    Then I should see "Dish name can't be blank"
