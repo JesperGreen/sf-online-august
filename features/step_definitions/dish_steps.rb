@@ -19,6 +19,10 @@ Given(/^I am on the dish page for "([^"]*)"$/) do |dish|
   dish_id = Dish.find_by(dish_name: dish)
   visit dish_path(dish_id)
 end
+Given(/^I am on the edit dish page for "([^"]*)"$/) do |dish|
+  dish_id = Dish.find_by(dish_name: dish)
+  visit edit_dish_path(dish_id)
+end
 
 Given(/^the following dishes exists$/) do |table|
   table.hashes.each do |hash|
@@ -30,3 +34,7 @@ Given(/^the following dishes exists$/) do |table|
   end
 end
 
+Then(/^I should be on the edit dish page for "([^"]*)"$/) do |name|
+  dish = Dish.find_by(dish_name: name)
+  expect(current_path).to eq edit_dish_path(dish)
+end

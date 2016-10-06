@@ -13,15 +13,15 @@ Feature: As a restaurant owner
       | Kebab     | Delicious kebab | 9000       |
 
   Scenario: Navigating to edit page
-    Given I am on the "show dish" page for "Kebab"
+    Given I am on the dish page for "Kebab"
     And I click the link "Edit"
-    Then I should be on the "edit dish" page for "Kebab"
+    Then I should be on the edit dish page for "Kebab"
 
   Scenario: Edit dish details
-    Given I am on the "edit dish" page for "Kebab"
+    Given I am on the edit dish page for "Kebab"
     And I fill in "Dish description" with "Kebab med sås"
     And I click the "Update Dish" button
-    Then I should be on the "show dish" page for "Kebab"
+    Then I should be on the dish page for "Kebab"
 
   Scenario: I should be the only one who can edit my dishes
     Given the following users exist
@@ -32,3 +32,6 @@ Feature: As a restaurant owner
     And I visit the restaurant page for "Anna"
     And I click the link "Edit"
     Then I should see "You are not authorized to access this page."
+
+  Scenario: Visitors can not edit dishes
+    Given I am not logged in
