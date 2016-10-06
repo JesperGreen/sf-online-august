@@ -20,7 +20,7 @@ Feature: As a restaurant owner
   Scenario: Edit dish details
     Given I am on the edit dish page for "Kebab"
     And I fill in "Dish description" with "Kebab med sås"
-    And I click the "Update Dish" button
+    And I click the "Submit" button
     Then I should be on the dish page for "Kebab"
 
   Scenario: I should be the only one who can edit my dishes
@@ -43,4 +43,4 @@ Feature: As a restaurant owner
       | Emma  | emma@food.se  | customer |
     And I log in as "Emma"
     And I am on the dish page for "Kebab"
-    Then I should not see "Edit dish"
+    Then I should not see "Submit"
